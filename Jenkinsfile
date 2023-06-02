@@ -1,9 +1,9 @@
 pipeline {
   agent any
   stages {
-    stage('build') {
+    stage('checkout') {
       steps {
-        sh 'echo "hello"'
+        git(url: 'https://github.com/Smijul/helllo_java.git', branch: 'master')
       }
     }
 
